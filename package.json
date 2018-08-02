@@ -1,0 +1,32 @@
+{
+  "name": "ts-gql",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "go": "ts-node",
+    "go1": "yarn go demo/01_untyped.ts",
+    "go2": "yarn go demo/02_apollo.ts",
+    "gen2": "apollo codegen:generate --schema=schema/schema.json --outputFlat --queries=demo/lib/queries.ts demo/types/apollo.ts",
+    "gen3": "gql-gen --schema schema/schema.json --template graphql-codegen-typescript-template -m --out demo/types/gqlgen.ts demo/lib/queries.ts"
+  },
+  "dependencies": {
+    "@fredyc/c2e-tasks": "^0.2.0",
+    "@playlyfe/gql": "^2.6.0",
+    "apollo": "^1.6.0",
+    "graphql": "^0.13.2",
+    "graphql-code-generator": "^0.10.6",
+    "graphql-codegen-typescript-template": "^0.10.6",
+    "graphql-request": "^1.8.0",
+    "graphql-tag": "^2.9.2",
+    "prettier": "^1.14.0",
+    "purdy": "^3.3.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.0.1"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}

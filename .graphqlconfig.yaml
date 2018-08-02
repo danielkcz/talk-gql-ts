@@ -1,0 +1,6 @@
+schemaPath: schema/schema.graphql
+extensions:
+  endpoints:
+    default:
+      url: 'https://www.graphqlhub.com/graphql'
+

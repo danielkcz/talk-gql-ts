@@ -1,0 +1,27 @@
+{
+  "schema": {
+    "files": ["schema/schema.graphql"]
+  },
+  "query": {
+    "files": [
+      {
+        "match": ["demo/lib/queries.ts"],
+        "parser": [
+          "EmbeddedQueryParser",
+          {
+            "startTag": "gql`",
+            "endTag": "`"
+          }
+        ],
+        "validate": {
+          "extends": "gql-rules-query",
+          "rules": {
+            "KnownFragmentNames": "off",
+            "KnownTypeNames": "off",
+            "NoUnusedFragments": "off"
+          }
+        }
+      }
+    ]
+  }
+}
